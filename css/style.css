@@ -14,9 +14,22 @@
 /* colors */
 :root {
   --main-font-color: #101828;
-  --main-background-color: #f9fafb;
+  --main-background-color: linear-gradient(0deg, #eff0f1 0%, #f9fafb 100%);
+  --logo-icon: linear-gradient(135deg, #2158f8 0%, #4134dc 100%);
   --blue: #2c51f2;
   --gray: #4a5565;
+}
+.bg-light-orange {
+  background-color: #fff0e6;
+}
+.bg-light-purple {
+  background-color: #f7edff;
+}
+.bg-light-green {
+  background-color: #e6faee;
+}
+.bg-light-blue {
+  background-color: #eaf3ff;
 }
 /* ----------------------------------------------------------------- */
 img {
@@ -54,6 +67,9 @@ img {
 .w600 {
   font-weight: 600;
 }
+.w500 {
+  font-weight: 500;
+}
 
 .gray {
   color: var(--gray);
@@ -71,34 +87,35 @@ img {
 .sidebar {
   position: fixed;
   right: 0;
-  top: 0;
   height: 100vh;
   z-index: 999;
   width: 250px;
-  box-shadow: 6px 0px 10px 0px black;
+  border-left: 1px solid #e5e7eb;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af4d transparent;
 }
 .sidebar .container {
   padding-block: 16px;
 }
 /* #1 icon & logo */
-.sidebar .container .item {
+.sidebar .container .logo {
   align-items: end;
   margin-bottom: 32px;
 }
-.sidebar .container .item .icon {
+.sidebar .container .logo .icon {
   width: 56px;
   height: 56px;
   padding: 16px;
-  background-color: var(--blue);
   border-radius: 16px;
+  background: var(--logo-icon);
 }
 
 /* #2 navbar */
 .sidebar nav {
+  margin-bottom: 32px;
 }
-.sidebar nav ul {
-}
-.sidebar nav ul li.link-1 {
+.sidebar nav ul li.link-active {
   border: 1px solid #dbeafe;
   background-color: #eff6ff;
 }
@@ -106,22 +123,46 @@ img {
   border-radius: 12px;
   padding: 12px 16px;
   margin-bottom: 8px;
+  cursor: pointer;
+}
+.sidebar nav ul li.link:hover {
+  background-color: #f9fafb;
 }
 .sidebar nav ul li .icon {
   width: 24px;
   height: 24px;
 }
-.sidebar nav ul li span {
+
+/* #3 quick-actions */
+.quick-actions h3 {
+  margin-bottom: 16px;
+}
+.quick-actions ul li {
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+}
+.quick-actions ul li:hover {
+  transform: translate(2px);
+}
+.quick-actions ul li .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+.quick-actions ul li .icon img {
+  width: 20px;
+}
+.quick-actions ul li.link:hover {
+  background-color: #f9fafb;
 }
 /* --------------------------------------------------------------- */
 /* --------------------- finance-manager --------------------- */
 main {
-  background-color: var(--main-background-color);
+  background: var(--main-background-color);
   width: calc(100% - 250px);
   min-height: 100vh;
-}
-
-header {
-  background-color: green;
-  width: 100%;
 }
