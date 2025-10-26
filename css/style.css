@@ -1,0 +1,127 @@
+/*  global rules */
+* {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  color: var(--main-font-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
+/* colors */
+:root {
+  --main-font-color: #101828;
+  --main-background-color: #f9fafb;
+  --blue: #2c51f2;
+  --gray: #4a5565;
+}
+/* ----------------------------------------------------------------- */
+img {
+  width: 100%;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+/* ----------------------------------------------------------------- */
+/* flex */
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gap-16 {
+  gap: 16px;
+}
+/* ----------------------------------------------------------------- */
+/* font */
+.f36 {
+  font-size: 36px;
+}
+.f14 {
+  font-size: 14px;
+}
+
+.w700 {
+  font-weight: 700;
+}
+.w600 {
+  font-weight: 600;
+}
+
+.gray {
+  color: var(--gray);
+}
+.blue {
+  color: var(--blue);
+}
+/* --------------------------------------------------------------- */
+/* --------------------- sidebar --------------------- */
+.dashboard {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 999;
+  width: 250px;
+  box-shadow: 6px 0px 10px 0px black;
+}
+.sidebar .container {
+  padding-block: 16px;
+}
+/* #1 icon & logo */
+.sidebar .container .item {
+  align-items: end;
+  margin-bottom: 32px;
+}
+.sidebar .container .item .icon {
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+  background-color: var(--blue);
+  border-radius: 16px;
+}
+
+/* #2 navbar */
+.sidebar nav {
+}
+.sidebar nav ul {
+}
+.sidebar nav ul li.link-1 {
+  border: 1px solid #dbeafe;
+  background-color: #eff6ff;
+}
+.sidebar nav ul li {
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+}
+.sidebar nav ul li .icon {
+  width: 24px;
+  height: 24px;
+}
+.sidebar nav ul li span {
+}
+/* --------------------------------------------------------------- */
+/* --------------------- finance-manager --------------------- */
+main {
+  background-color: var(--main-background-color);
+  width: calc(100% - 250px);
+  min-height: 100vh;
+}
+
+header {
+  background-color: green;
+  width: 100%;
+}
