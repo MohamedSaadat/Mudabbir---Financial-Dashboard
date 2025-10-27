@@ -18,6 +18,7 @@
   --logo-icon: linear-gradient(135deg, #2158f8 0%, #4134dc 100%);
   --blue: #2c51f2;
   --gray: #4a5565;
+  --white: #fff;
 }
 .bg-light-orange {
   background-color: #fff0e6;
@@ -86,18 +87,21 @@ img {
 }
 .sidebar {
   position: fixed;
+  background-color: var(--white);
   right: 0;
   height: 100vh;
   z-index: 999;
   width: 250px;
   border-left: 1px solid #e5e7eb;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #9ca3af4d transparent;
+  transition: 0.2s ease-in-out;
 }
 .sidebar .container {
   padding-block: 16px;
 }
+
 /* #1 icon & logo */
 .sidebar .container .logo {
   align-items: end;
@@ -162,7 +166,8 @@ img {
 /* --------------------------------------------------------------- */
 /* --------------------- finance-manager --------------------- */
 main {
-  background: var(--main-background-color);
+  /* background: var(--main-background-color); */
   width: calc(100% - 250px);
   min-height: 100vh;
+  transition: 0.2s ease-in-out;
 }

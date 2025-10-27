@@ -1,0 +1,61 @@
+@media (min-width: 480px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (max-width: 1280px) {
+  /* --------------------------------------------------------------- */
+  /* --------------------- sidebar --------------------- */
+  .sidebar {
+    width: 80px;
+    overflow-y: visible;
+  }
+  /* #1 icon & logo */
+  .sidebar .container .logo {
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 32px;
+  }
+  .sidebar .container .logo h1,
+  .sidebar .container .logo span {
+    display: none;
+  }
+
+  /* #2 navbar */
+  .sidebar nav {
+    margin-bottom: 16px;
+  }
+  .sidebar nav ul li {
+    justify-content: center;
+  }
+  .sidebar nav ul li span {
+    display: none;
+  }
+
+  /* #3 quick-actions */
+  .quick-actions h3 {
+    display: none;
+  }
+  .quick-actions ul li {
+    padding: 8px;
+    justify-content: center;
+  }
+  .quick-actions ul li span {
+    display: none;
+  }
+  /* --------------------------------------------------------------- */
+  /* --------------------- finance-manager --------------------- */
+  main {
+    width: calc(100% - 65px);
+  }
+}
+
+@media (min-width: 1536px) {
+}
