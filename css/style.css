@@ -73,6 +73,20 @@ header {
   color: var(--blue);
 }
 /* ----------------------------------------------------------------- */
+/* classes */
+.flex {
+  display: flex;
+}
+.align-end {
+  align-items: end;
+}
+.gap-16 {
+  gap: 16px;
+}
+.m16{
+  margin-bottom: 16px;
+}
+/* ----------------------------------------------------------------- */
 /* --------------------- sidebar --------------------- */
 .dashboard {
   position: relative;
@@ -179,9 +193,11 @@ main {
 /* --------------------- header --------------------- */
 header .container {
   width: 95%;
-  padding: 16px;
+  padding: 0 16px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   gap: 20px;
   background-color: var(--white);
   box-shadow: 0px 1px 3px 0px #0000001a;
@@ -190,14 +206,16 @@ header .container {
 /* icon & logo */
 header .container .logo {
   display: flex;
-  align-items: end;
-  gap: 16px;
+  align-items: center;
+  gap: 24px;
 }
-header .container .logo h1{
-  font-size: 24px;
+header .container .logo h1 {
+  font-size: 36px;
 }
-header .container .logo h1+span{
-  font-size: 12px;
+header .container .logo h1 + span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray);
 }
 header .container .logo .icon {
   width: 56px;
@@ -211,6 +229,7 @@ header .container .user {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 }
 header .container .user > div {
   display: flex;
@@ -219,11 +238,19 @@ header .container .user > div {
 header .container .user > div .icon {
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--white);
-  width: 32px;
-  padding: 7px;
+  padding: 8px;
   border-radius: 11px;
   box-shadow: 0px 0px 1px 1px #0000001a;
+  transition: .2s ease-in-out;
+}
+header .container .user > div .icon:hover{
+  background-color: #f3f4f6;
+}
+header .container .user > div .icon img{
+  width: 24px;
 }
 header .container .user > div .icon:nth-child(2)::after {
   position: absolute;
@@ -239,38 +266,57 @@ header .container .user > div .icon:nth-child(2)::before {
   position: absolute;
   content: "2";
   top: -7px;
-  right: 0px;
+  right: 1px;
   color: var(--white);
   font-size: 11px;
+  font-weight: 600;
   z-index: 1;
 }
-header .container .user .image {
+header .container .user .user-name {
   background-color: var(--white);
-  box-shadow: 0px 0px 1px 1px #0000001a;
-  width: 60px;
   padding: 12px;
+  border: 1px solid #0000001a;
   border-radius: 16px;
+  transition: .2s ease-in-out;
+}
+header .container .user .user-name:hover{
+  box-shadow: 0px 2px 5px 0px #0000002d;
+}
+header .container .user .user-name p:nth-child(1){
+  font-size: 14px;
+  font-weight: 600;
+}
+header .container .user .user-name p:nth-child(2){
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray);
 }
 header .container .user img {
+  width: 40px;
   border-radius: 8px;
 }
 /* state */
-header .container .state {
-  text-align: center;
-  background-color: #d3ffe0;
-  padding-block: 4px;
-  font-size: 12px;
+.state-logo,
+.state-header {
+  background-color: #f0fdf4;
+  padding: 4px 8px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--green);
   border-radius: 8px;
+  border: 1px solid #b3ffc9;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
 }
-header .container .state > div {
+.state-logo > div,
+.state-header > div {
   width: 8px;
   height: 8px;
   background-color: var(--green);
   border-radius: 10px;
+}
+.state-header{
+  display: none;
 }

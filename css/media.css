@@ -6,6 +6,31 @@
   main {
     width: 100%;
   }
+  /* --------------------- header --------------------- */
+  header .container {
+    padding: 16px;
+    align-items: start;
+    flex-direction: column;
+  }
+  header .container .logo h1 {
+    font-size: 24px;
+  }
+  header .container .logo h1 + span {
+    font-size: 12px;
+  }
+  .state-logo {
+    display: none;
+  }
+  .state-header {
+    display: flex;
+    width: 100%;
+  }
+  header .container .user {
+    width: 100%;
+  }
+  header .container .user .user-name .name {
+    display: none;
+  }
 }
 
 @media (min-width: 568px) {
@@ -56,25 +81,6 @@
     width: calc(100% - 80px);
   }
   /* --------------------- header --------------------- */
-  header .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  header .container .logo {
-    align-items: center;
-    gap: 32px;
-  }
-  /* user & search & notification */
-  header .container .user {
-    gap: 24px;
-  }
-  /* state */
-  header .container .logo .state {
-    display: flex;
-  }
-  header .container .state {
-    display: none;
-  }
 }
 
 @media (min-width: 1024px) {
