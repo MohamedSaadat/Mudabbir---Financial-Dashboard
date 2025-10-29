@@ -1,16 +1,19 @@
 /*  global rules */
-* {
-  font-family: "IBM Plex Sans Arabic", sans-serif;
-  color: var(--main-font-color);
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  color: var(--main-font-color);
   list-style: none;
   text-decoration: none;
   scroll-behavior: smooth;
   line-height: 1.5;
 }
-
 /* colors */
 :root {
   --main-font-color: #101828;
@@ -19,6 +22,7 @@
   --blue: #2c51f2;
   --gray: #4a5565;
   --white: #fff;
+  --green: #00a63e;
 }
 .bg-light-orange {
   background-color: #fff0e6;
@@ -37,21 +41,11 @@ img {
   width: 100%;
 }
 .container {
-  width: 80%;
+  width: 95%;
   margin: auto;
 }
-/* ----------------------------------------------------------------- */
-/* flex */
-.flex {
-  display: flex;
-}
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.gap-16 {
-  gap: 16px;
+header {
+  margin-top: 24px;
 }
 /* ----------------------------------------------------------------- */
 /* font */
@@ -78,7 +72,7 @@ img {
 .blue {
   color: var(--blue);
 }
-/* --------------------------------------------------------------- */
+/* ----------------------------------------------------------------- */
 /* --------------------- sidebar --------------------- */
 .dashboard {
   position: relative;
@@ -92,6 +86,7 @@ img {
   height: 100vh;
   z-index: 999;
   width: 250px;
+  padding-inline: 8px;
   border-left: 1px solid #e5e7eb;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -104,7 +99,9 @@ img {
 
 /* #1 icon & logo */
 .sidebar .container .logo {
+  display: flex;
   align-items: end;
+  gap: 16px;
   margin-bottom: 32px;
 }
 .sidebar .container .logo .icon {
@@ -124,6 +121,8 @@ img {
   background-color: #eff6ff;
 }
 .sidebar nav ul li {
+  display: flex;
+  gap: 16px;
   border-radius: 12px;
   padding: 12px 16px;
   margin-bottom: 8px;
@@ -142,6 +141,8 @@ img {
   margin-bottom: 16px;
 }
 .quick-actions ul li {
+  display: flex;
+  gap: 16px;
   border-radius: 12px;
   padding: 12px 16px;
   margin-bottom: 8px;
@@ -153,6 +154,9 @@ img {
   transform: translate(2px);
 }
 .quick-actions ul li .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 8px;
@@ -163,11 +167,110 @@ img {
 .quick-actions ul li.link:hover {
   background-color: #f9fafb;
 }
-/* --------------------------------------------------------------- */
+/* ----------------------------------------------------------------- */
 /* --------------------- finance-manager --------------------- */
 main {
-  /* background: var(--main-background-color); */
+  background: var(--main-background-color);
   width: calc(100% - 250px);
   min-height: 100vh;
   transition: 0.2s ease-in-out;
+}
+
+/* --------------------- header --------------------- */
+header .container {
+  width: 95%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--white);
+  box-shadow: 0px 1px 3px 0px #0000001a;
+  border-radius: 16px;
+}
+/* icon & logo */
+header .container .logo {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+}
+header .container .logo h1{
+  font-size: 24px;
+}
+header .container .logo h1+span{
+  font-size: 12px;
+}
+header .container .logo .icon {
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--logo-icon);
+}
+/* user & search & notification */
+header .container .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .user > div {
+  display: flex;
+  gap: 8px;
+}
+header .container .user > div .icon {
+  position: relative;
+  display: flex;
+  background-color: var(--white);
+  width: 32px;
+  padding: 7px;
+  border-radius: 11px;
+  box-shadow: 0px 0px 1px 1px #0000001a;
+}
+header .container .user > div .icon:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  top: -6px;
+  right: -3px;
+  background-color: red;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+}
+header .container .user > div .icon:nth-child(2)::before {
+  position: absolute;
+  content: "2";
+  top: -7px;
+  right: 0px;
+  color: var(--white);
+  font-size: 11px;
+  z-index: 1;
+}
+header .container .user .image {
+  background-color: var(--white);
+  box-shadow: 0px 0px 1px 1px #0000001a;
+  width: 60px;
+  padding: 12px;
+  border-radius: 16px;
+}
+header .container .user img {
+  border-radius: 8px;
+}
+/* state */
+header .container .state {
+  text-align: center;
+  background-color: #d3ffe0;
+  padding-block: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--green);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+header .container .state > div {
+  width: 8px;
+  height: 8px;
+  background-color: var(--green);
+  border-radius: 10px;
 }

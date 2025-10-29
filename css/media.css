@@ -1,19 +1,20 @@
 @media (min-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+  /* --------------------- finance-manager --------------------- */
+  main {
+    width: 100%;
+  }
+}
+
+@media (min-width: 568px) {
 }
 
 @media (min-width: 768px) {
-}
-
-@media (min-width: 1024px) {
-}
-
-@media (min-width: 1280px) {
-}
-
-@media (max-width: 1280px) {
-  /* --------------------------------------------------------------- */
   /* --------------------- sidebar --------------------- */
   .sidebar {
+    display: block;
     width: 80px;
     overflow-y: visible;
   }
@@ -21,7 +22,6 @@
   .sidebar .container .logo {
     justify-content: center;
     gap: 0;
-    margin-bottom: 32px;
   }
   .sidebar .container .logo h1,
   .sidebar .container .logo span {
@@ -53,7 +53,74 @@
   /* --------------------------------------------------------------- */
   /* --------------------- finance-manager --------------------- */
   main {
-    width: calc(100% - 65px);
+    width: calc(100% - 80px);
+  }
+  /* --------------------- header --------------------- */
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header .container .logo {
+    align-items: center;
+    gap: 32px;
+  }
+  /* user & search & notification */
+  header .container .user {
+    gap: 24px;
+  }
+  /* state */
+  header .container .logo .state {
+    display: flex;
+  }
+  header .container .state {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+  /* --------------------- sidebar --------------------- */
+  .sidebar {
+    width: 250px;
+    overflow-y: auto;
+  }
+  /* #1 icon & logo */
+  .sidebar .container .logo {
+    gap: 16px;
+  }
+  .sidebar .container .logo h1,
+  .sidebar .container .logo span {
+    display: block;
+  }
+
+  /* #2 navbar */
+  .sidebar nav {
+    margin-bottom: 32px;
+  }
+  .sidebar nav ul li {
+    justify-content: start;
+  }
+  .sidebar nav ul li span {
+    display: block;
+  }
+
+  /* #3 quick-actions */
+  .quick-actions h3 {
+    display: block;
+  }
+  .quick-actions ul li {
+    padding: 12px 16px;
+    justify-content: start;
+  }
+  .quick-actions ul li span {
+    display: block;
+  }
+  /* --------------------------------------------------------------- */
+  /* --------------------- finance-manager --------------------- */
+  main {
+    width: calc(100% - 250px);
   }
 }
 
