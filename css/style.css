@@ -44,8 +44,9 @@ img {
   width: 95%;
   margin: auto;
 }
-header {
-  margin-top: 24px;
+header,
+section {
+  margin: 24px 0;
 }
 /* ----------------------------------------------------------------- */
 /* font */
@@ -83,8 +84,13 @@ header {
 .gap-16 {
   gap: 16px;
 }
-.m16{
+.m16 {
   margin-bottom: 16px;
+}
+.card {
+  background-color: var(--white);
+  box-shadow: 0px 1px 3px 0px #0000001a;
+  border-radius: 16px;
 }
 /* ----------------------------------------------------------------- */
 /* --------------------- sidebar --------------------- */
@@ -191,8 +197,8 @@ main {
 }
 
 /* --------------------- header --------------------- */
+/* icon & logo */
 header .container {
-  width: 95%;
   padding: 0 16px;
   display: flex;
   justify-content: space-between;
@@ -203,7 +209,6 @@ header .container {
   box-shadow: 0px 1px 3px 0px #0000001a;
   border-radius: 16px;
 }
-/* icon & logo */
 header .container .logo {
   display: flex;
   align-items: center;
@@ -244,12 +249,12 @@ header .container .user > div .icon {
   padding: 8px;
   border-radius: 11px;
   box-shadow: 0px 0px 1px 1px #0000001a;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-header .container .user > div .icon:hover{
+header .container .user > div .icon:hover {
   background-color: #f3f4f6;
 }
-header .container .user > div .icon img{
+header .container .user > div .icon img {
   width: 24px;
 }
 header .container .user > div .icon:nth-child(2)::after {
@@ -277,16 +282,16 @@ header .container .user .user-name {
   padding: 12px;
   border: 1px solid #0000001a;
   border-radius: 16px;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-header .container .user .user-name:hover{
+header .container .user .user-name:hover {
   box-shadow: 0px 2px 5px 0px #0000002d;
 }
-header .container .user .user-name p:nth-child(1){
+header .container .user .user-name p:nth-child(1) {
   font-size: 14px;
   font-weight: 600;
 }
-header .container .user .user-name p:nth-child(2){
+header .container .user .user-name p:nth-child(2) {
   font-size: 12px;
   font-weight: 600;
   color: var(--gray);
@@ -317,6 +322,27 @@ header .container .user img {
   background-color: var(--green);
   border-radius: 10px;
 }
-.state-header{
+.state-header {
   display: none;
+}
+/* --------------------- summary-cards --------------------- */
+.summary-cards {
+}
+.summary-cards .container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+  gap: 24px;
+}
+.summary-cards .container img {
+  width: 16px;
+}
+.summary-cards .container .card {
+  padding: 16px;
+
+}
+.summary-cards .container .current-balance {
+}
+.summary-cards .container .income {
+}
+.summary-cards .container .expenses {
 }
