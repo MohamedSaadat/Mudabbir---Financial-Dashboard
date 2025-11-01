@@ -353,6 +353,9 @@ header .container .user img {
   grid-template-columns: repeat(3, minmax(0px, 1fr));
   gap: 24px;
 }
+.summary-cards .container .card div{
+  display: flex;
+}
 .summary-cards .container img {
   width: 16px;
 }
