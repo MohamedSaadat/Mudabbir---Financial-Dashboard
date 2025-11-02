@@ -30,6 +30,9 @@ body {
 .bg-light-purple {
   background-color: #f7edff;
 }
+.bg-dark-purple {
+  background-color: #6e11b0;
+}
 .bg-light-green {
   background-color: #e6faee;
 }
@@ -39,14 +42,23 @@ body {
 .bg-yellow {
   background-color: #fef9c2;
 }
+.bg-dark-orang {
+  background-color: #ff6900;
+}
 .bg-orange {
   background-color: #ffedd4;
 }
 .bg-purple {
   background-color: #f3e8ff;
 }
+.bg-red {
+  background-color: red;
+}
 .bg-light-red {
   background-color: #ffe2e2;
+}
+.bg-green3 {
+  background-color: #00a63e;
 }
 .bg-green2 {
   background-color: #cefafe;
@@ -141,11 +153,32 @@ td {
 .align-end {
   align-items: end;
 }
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-evenly {
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gap-8 {
+  gap: 8px;
+}
 .gap-16 {
   gap: 16px;
 }
+.border-radius-3 {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.m8 {
+  margin-bottom: 8px;
+}
 .m16 {
   margin-bottom: 16px;
+}
+.m48 {
+  margin-bottom: 48px;
 }
 .card {
   background-color: var(--white);
@@ -176,7 +209,24 @@ td {
   border-radius: 50px;
   margin-top: 8px;
 }
-
+.width50 {
+  width: 50%;
+  height: 8px;
+  border-radius: 50px;
+  margin-top: 8px;
+}
+.width-12x12 {
+  width: 12px;
+  height: 12px;
+}
+.width-16x40 {
+  width: 16px;
+  height: 40px;
+}
+.width-16x120 {
+  width: 16px;
+  height: 120px;
+}
 /* ----------------------------------------------------------------- */
 /* --------------------- sidebar --------------------- */
 .dashboard {
@@ -280,7 +330,6 @@ main {
   min-height: 100vh;
   transition: 0.2s ease-in-out;
 }
-
 /* --------------------- header --------------------- */
 /* icon & logo */
 header .container {
@@ -431,6 +480,12 @@ header .container .user img {
 .dashboard-widgets .container img {
   width: 20px;
 }
+.dashboard-widgets .container .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
 /* notifications */
 .dashboard-widgets .container .notifications {
   grid-column: span 4;
@@ -474,11 +529,6 @@ header .container .user img {
 .dashboard-widgets .activity .text {
   width: 100%;
 }
-.dashboard-widgets .activity .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .dashboard-widgets .activities-list .button {
   text-align: center;
   border-top: 1px solid #e7e7e7;
@@ -489,28 +539,22 @@ header .container .user img {
   font-weight: 500;
   color: var(--blue);
 }
-/* income-vs-expenses */
-.dashboard-widgets .container .income-vs-expenses {
+/* transactions */
+.dashboard-widgets .container .transactions {
   grid-column: span 8;
   grid-row: span 2;
 }
-.dashboard-widgets .income-vs-expenses .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-.dashboard-widgets .income-vs-expenses table {
+.dashboard-widgets .transactions table {
   width: 100%;
   border-collapse: collapse;
 }
-.dashboard-widgets .income-vs-expenses table .last {
+.dashboard-widgets .transactions table .last {
   border-bottom: none;
 }
-.dashboard-widgets .income-vs-expenses table img {
+.dashboard-widgets .transactions table img {
   width: 16px;
 }
-.dashboard-widgets .income-vs-expenses table th {
+.dashboard-widgets .transactions table th {
   text-align: start;
   font-size: 14px;
   font-weight: 600;
@@ -518,19 +562,19 @@ header .container .user img {
   padding: 0px 8px 16px;
   border-bottom: 1px solid #e7e7e7;
 }
-.dashboard-widgets .income-vs-expenses table td {
+.dashboard-widgets .transactions table td {
   padding: 16px 8px;
   border-bottom: 1px solid #e7e7e780;
 }
-.dashboard-widgets .income-vs-expenses table .iconText {
+.dashboard-widgets .transactions table .iconText {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.dashboard-widgets .income-vs-expenses table .image {
+.dashboard-widgets .transactions table .image {
   width: 40px;
 }
-.dashboard-widgets .income-vs-expenses table .iconText .icon {
+.dashboard-widgets .transactions table .iconText .icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -538,23 +582,17 @@ header .container .user img {
   justify-content: center;
   align-items: center;
 }
-.dashboard-widgets .income-vs-expenses table .image img {
+.dashboard-widgets .transactions table .image img {
   width: 100%;
   border-radius: 50%;
 }
-.dashboard-widgets .income-vs-expenses table .text {
+.dashboard-widgets .transactions table .text {
   display: flex;
   flex-direction: column;
 }
 /* bills */
 .dashboard-widgets .container .bills {
   grid-column: span 4;
-}
-.dashboard-widgets .bills .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
 }
 .dashboard-widgets .bills .text {
   text-align: center;
@@ -602,12 +640,6 @@ header .container .user img {
   grid-column: span 4;
   grid-row: span 2;
 }
-.dashboard-widgets .budget .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
 .dashboard-widgets .budget .items {
   display: flex;
   flex-direction: column;
@@ -633,4 +665,78 @@ header .container .user img {
 .dashboard-widgets .budget .items .item div {
   justify-content: space-between;
   align-items: center;
+}
+.dashboard-widgets .budget .items .hover .icon {
+  display: flex;
+  padding: 8px;
+  border-radius: 8px;
+}
+.dashboard-widgets .budget .items .hover .iconText div[class="flex"] {
+  gap: 8px;
+}
+/* income-vs-expenses-card */
+.dashboard-widgets .container .income-vs-expenses {
+  grid-column: span 4;
+}
+.dashboard-widgets .income-vs-expenses .chart div[class~="flex-center"] {
+  align-items: end;
+  gap: 2px;
+}
+/* payment-methods-card */
+.dashboard-widgets .container .payment {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+.dashboard-widgets .payment .visaCards .visa {
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  padding: 24px;
+}
+.dashboard-widgets .payment .visaCards .visa img{
+  width: 40px;
+}
+.dashboard-widgets .payment .visaCards .visa div[class="flex"]{
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-widgets .payment .visaCards .visa div[class="flex"] div:first-child{
+  width: 50px;
+  height: 35px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.184);
+}
+.dashboard-widgets .payment .visaCards .visa div[class="flex"] div:first-child>div{
+  width: 25px;
+  height: 15px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.584);
+
+}
+/* account-summary-card */
+.dashboard-widgets .container .account {
+  grid-column: span 4;
+}
+.dashboard-widgets .account .items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.dashboard-widgets .account .items .item {
+  background-color: #fcfcfd;
+  padding: 16px;
+  border: 1px solid #ededed;
+  border-radius: 16px;
+}
+.dashboard-widgets .account .items .item div {
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-widgets .account .items .item .icon {
+  display: flex;
+  padding: 8px;
+  border-radius: 8px;
+}
+.dashboard-widgets .account .items .item .iconText div[class="flex"] {
+  gap: 8px;
 }
