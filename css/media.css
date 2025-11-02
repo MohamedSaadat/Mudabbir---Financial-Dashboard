@@ -43,6 +43,43 @@
 }
 
 @media (max-width: 1024px) {
+  /* notifications */
+  .dashboard-widgets .container .notifications {
+    grid-column: span 6;
+    order: 1;
+  }
+  /* transactions */
+  .dashboard-widgets .container .transactions {
+    grid-column: span 12;
+    order: 3;
+  }
+  /* bills */
+  .dashboard-widgets .container .bills {
+    grid-column: span 6;
+    order: 4;
+  }
+  /* budget-overview-card */
+  .dashboard-widgets .container .budget {
+    grid-column: span 6;
+    grid-row: span 1;
+    order: 6;
+  }
+  /* income-vs-expenses-card */
+  .dashboard-widgets .container .income-vs-expenses {
+    grid-column: span 6;
+    order: 2;
+  }
+  /* payment-methods-card */
+  .dashboard-widgets .container .payment {
+    grid-column: span 6;
+    grid-row: span 1;
+    order: 7;
+  }
+  /* account-summary-card */
+  .dashboard-widgets .container .account {
+    grid-column: span 6;
+    order: 5;
+  }
 }
 
 @media (max-width: 768px) {
@@ -84,6 +121,41 @@
   }
   header .container .user .user-name .name {
     display: none;
+  }
+  /* --------------------- dashboard-widgets --------------------- */
+  /* notifications */
+  .dashboard-widgets .container .notifications {
+    grid-column: span 12;
+  }
+  /* transactions */
+  .dashboard-widgets .container .transactions {
+    grid-column: span 12;
+    order: 2;
+  }
+  /* bills */
+  .dashboard-widgets .container .bills {
+    grid-column: span 12;
+    order: 3;
+  }
+  /* budget-overview-card */
+  .dashboard-widgets .container .budget {
+    grid-column: span 12;
+    order: 4;
+  }
+  /* income-vs-expenses-card */
+  .dashboard-widgets .container .income-vs-expenses {
+    grid-column: span 12;
+    order: 5;
+  }
+  /* payment-methods-card */
+  .dashboard-widgets .container .payment {
+    grid-column: span 12;
+    order: 7;
+  }
+  /* account-summary-card */
+  .dashboard-widgets .container .account {
+    grid-column: span 12;
+    order: 6;
   }
 }
 

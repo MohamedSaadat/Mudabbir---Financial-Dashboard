@@ -45,6 +45,9 @@ body {
 .bg-dark-orang {
   background-color: #ff6900;
 }
+.bg-dark-red{
+  background-color: #c70036;
+}
 .bg-orange {
   background-color: #ffedd4;
 }
@@ -68,6 +71,9 @@ body {
 }
 .bg-blue {
   background-color: var(--blue);
+}
+.bg-dark-blue {
+  background-color: #372aac;
 }
 .bg-gray {
   background-color: #e7e7e7;
@@ -687,31 +693,46 @@ header .container .user img {
   grid-column: span 4;
   grid-row: span 2;
 }
+.dashboard-widgets .payment .visaCards{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 .dashboard-widgets .payment .visaCards .visa {
   width: 100%;
   height: 200px;
   border-radius: 16px;
   padding: 24px;
+  color: white;
 }
-.dashboard-widgets .payment .visaCards .visa img{
+.dashboard-widgets .payment .visaCards .visa img {
   width: 40px;
 }
-.dashboard-widgets .payment .visaCards .visa div[class="flex"]{
+.dashboard-widgets .payment .visaCards .visa .text {
   justify-content: space-between;
   align-items: center;
 }
-.dashboard-widgets .payment .visaCards .visa div[class="flex"] div:first-child{
+.dashboard-widgets .payment .visaCards .visa div[class="flex"] {
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-widgets .payment .visaCards .visa div[class="flex"] div:first-child {
   width: 50px;
   height: 35px;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.184);
 }
-.dashboard-widgets .payment .visaCards .visa div[class="flex"] div:first-child>div{
+.dashboard-widgets
+  .payment
+  .visaCards
+  .visa
+  div[class="flex"]
+  div:first-child
+  > div {
   width: 25px;
   height: 15px;
   border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.584);
-
+  background-color: #ffffff95;
 }
 /* account-summary-card */
 .dashboard-widgets .container .account {
