@@ -11,6 +11,7 @@ This project is ideal as a starting point for **finance apps, admin panels, and 
 
 ![HTML Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=fff)
 ![CSS Badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=fff)
+![Responsive](https://img.shields.io/badge/Responsive-Yes-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-blue?style=for-the-badge)
 
@@ -118,5 +119,8 @@ You are free to modify, reuse, and build upon it for personal or commercial use.
 If you’d like to collaborate or discuss UI/UX or front-end design:
 
 **Author:** Mohamed Saadat
+
+**Email:** mohamed93saadat@gmail.com
+
 **GitHub:** [https://github.com/MohamedSaadat](https://github.com/MohamedSaadat)
 
